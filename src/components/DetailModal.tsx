@@ -136,7 +136,7 @@ export default function DetailModal() {
               />
               <IconButton
                 onClick={() => {
-                  setDetailType({ mediaType: undefined, id: undefined });
+                  setDetailType({ mediaType: MEDIA_TYPE.Movie, id: 0 }); // or null, based on your type
                 }}
                 sx={{
                   top: 15,
