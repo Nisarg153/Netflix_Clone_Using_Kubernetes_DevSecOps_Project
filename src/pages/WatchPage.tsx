@@ -2,7 +2,6 @@ import { useState, useRef, useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import Player from "video.js/dist/types/player";
 import { Box, Stack, Typography } from "@mui/material";
-import { SliderUnstyledOwnProps } from "@mui/base/SliderUnstyled";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import PauseIcon from "@mui/icons-material/Pause";
 import SkipNextIcon from "@mui/icons-material/SkipNext";
@@ -71,9 +70,10 @@ export function Component() {
     });
 
     player.on("timeupdate", () => {
-      setPlayerState((draft) => {
-        return { ...draft, playedSeconds: player.currentTime() };
-      });
+      setPlayerState((prevState) => ({
+      ...prevState,
+      playedSeconds: player.currentTime()
+      }));
     });
 
     player.one("durationchange", () => {
@@ -88,7 +88,7 @@ export function Component() {
     });
   };
 
-  const handleVolumeChange: SliderUnstyledOwnProps["onChange"] = (_, value) => {
+  const handleVolumeChange = (_: Event, value: number | number[]) => {
     playerRef.current?.volume((value as number) / 100);
     setPlayerState((draft) => {
       return { ...draft, volume: (value as number) / 100 };
