@@ -7,8 +7,13 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 80
+  - name: http
+    port: 80
     targetPort: 80
     nodePort: 30007
+  - name: metrics
+    port: 9091
+    targetPort: 9091
+    protocol: TCP
   selector:
     app: netflix-app
