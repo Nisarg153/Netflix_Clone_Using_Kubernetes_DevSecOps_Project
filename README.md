@@ -40,6 +40,19 @@ Before we start the project there are following things that needs to be install.
      ```
   6. Sonarqube
      - You can refer this link on how to install sonarqube **https://gist.github.com/Nisarg153/171fc33c4d8b1134355dd7b550b21273**
+     - You also have to install sonar-scanner on jenkins server. you can do that by typing the following command:
+       ```bash
+       # Navigate to /opt and download scanner
+       cd /opt
+       sudo wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+       # Unzip and rename for simplicity
+       sudo unzip sonar-scanner-cli-*.zip
+       sudo mv sonar-scanner-* sonar-scanner
+       # Make it globally accessible
+       sudo ln -s /opt/sonar-scanner/bin/sonar-scanner /usr/local/bin/sonar-scanner
+       sonar-scanner --version
+       ```
+     - SonnarScanner requires JAVA (Java 11+ recommended).
   7. NodeJS
      ```bash
      sudo apt update && sudo apt upgrade -y
@@ -48,8 +61,29 @@ Before we start the project there are following things that needs to be install.
      sudo npm install -g n
      sudo n lts     # install latest LTS version
      sudo n 20.10.0 # or a specific version
+     sudo npm install -g typescript
      ```
-     - Use n to switch versions interactively with sudo n.  
+     - Use n to switch versions interactively with sudo n.
+  8. Trivy
+     ```bash
+     sudo apt-get install wget apt-transport-https gnupg lsb-release
+     wget -qO - https://aquasecurity.github.io/trivy-repo/deb/public.key | sudo apt-key add -
+     echo deb https://aquasecurity.github.io/trivy-repo/deb $(lsb_release -sc) main | sudo tee -a /etc/apt/sources.list.d/trivy.list
+     sudo apt-get update
+     sudo apt-get install trivy
+     trivy --version
+     ```
+     - Once installed, you can scan a Docker image like:
+        ```bash
+        trivy image nginx:latest
+        ```
+      Or scan your file system:
+       ```bash
+       trivy fs .
+       ```
+  9. OWASP
+      ```bash
+      
   10. Kubernetes
       - I have installed kubernets on my system
       - you can refer to this link to install **https://kubernetes.io/docs/tasks/tools/install-kubectl-windows**
