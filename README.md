@@ -1,7 +1,3 @@
-
-![DevSecOps_Netflix_project drawio](https://github.com/user-attachments/assets/2ccefcd3-a1de-4462-a894-a92fd8e9ba08)
-
-
 # **Youtube Video for step by step Demonstration!**
 [![Video Tutorial](https://img.youtube.com/vi/g8X5AoqCJHc/0.jpg)](https://youtu.be/g8X5AoqCJHc)
 
@@ -12,6 +8,9 @@
 
 
 # Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!
+## Overview:
+![DevSecOps_Netflix_project drawio](https://github.com/user-attachments/assets/2ccefcd3-a1de-4462-a894-a92fd8e9ba08)
+
 Before we start the project there are following things that needs to be install.
   1. Java 17
     ```bash
