@@ -13,14 +13,14 @@
 
 Before we start the project there are following things that needs to be install.
   1. Java 17
-    ```bash
-    sudo apt update
-    sudo apt install fontconfig openjdk-17-jre
-    java -version
-    openjdk version "17.0.8" 2023-07-18
-    OpenJDK Runtime Environment (build 17.0.8+7-Debian-1deb12u1)
-    OpenJDK 64-Bit Server VM (build 17.0.8+7-Debian-1deb12u1, mixed mode, sharing)
-    ```
+  ```bash
+  sudo apt update
+  sudo apt install fontconfig openjdk-17-jre
+  java -version
+  openjdk version "17.0.8" 2023-07-18
+  OpenJDK Runtime Environment (build 17.0.8+7-Debian-1deb12u1)
+  OpenJDK 64-Bit Server VM (build 17.0.8+7-Debian-1deb12u1, mixed mode, sharing)
+  ```
   3. Jenkins
      - You can refer this link on how to install Jenkins **https://github.com/Nisarg153/Jenkins_Installation**
      - Access Jenkins in a web browser using the public IP of your EC2 instance. 
