@@ -1,14 +1,5 @@
-<div align="center">
-  <img src="./public/assets/DevSecOps.png" alt="Logo" width="100%" height="100%">
 
-  <br>
-  <a href="http://netflix-clone-with-tmdb-using-react-mui.vercel.app/">
-    <img src="./public/assets/netflix-logo.png" alt="Logo" width="100" height="32">
-  </a>
-</div>
-
-<br />
-
+![DevSecOps_Netflix_project drawio](https://github.com/user-attachments/assets/2ccefcd3-a1de-4462-a894-a92fd8e9ba08)
 
 
 # **Youtube Video for step by step Demonstration!**
