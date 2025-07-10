@@ -42,15 +42,26 @@ Before we start the project there are following things that needs to be install.
      - You can refer this link on how to install sonarqube **https://gist.github.com/Nisarg153/171fc33c4d8b1134355dd7b550b21273**
      - You also have to install sonar-scanner on jenkins server. you can do that by typing the following command:
        ```bash
-       # Navigate to /opt and download scanner
        cd /opt
        sudo wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
-       # Unzip and rename for simplicity
-       sudo unzip sonar-scanner-cli-*.zip
-       sudo mv sonar-scanner-* sonar-scanner
-       # Make it globally accessible
+       sudo unzip sonar-scanner-cli-5.0.1.3006-linux.zip
+       sudo mv sonar-scanner-5.0.1.3006-linux sonar-scanner
+       # Add to PATH
        sudo ln -s /opt/sonar-scanner/bin/sonar-scanner /usr/local/bin/sonar-scanner
        sonar-scanner --version
+       ```
+     - Optional: Add SonarScanner in Jenkins UI
+       If you want Jenkins to manage SonarScanner:
+       1. Go to Manage Jenkins → Global Tool Configuration
+       2. Scroll to SonarQube Scanner
+       3. Click “Add SonarQube Scanner”
+       4. Name: sonar-scanner
+       5. Install automatically (or point to /opt/sonar-scanner)
+       Then in Jenkinsfile, use:
+       ```bash
+       tools {
+         sonarQubeScanner 'sonar-scanner'
+       }
        ```
      - SonnarScanner requires JAVA (Java 11+ recommended).
   7. NodeJS
@@ -82,8 +93,32 @@ Before we start the project there are following things that needs to be install.
        trivy fs .
        ```
   9. OWASP
+     - Fix: Define "DP-Check" in Jenkins
+       Step-by-step:
+       1. Go to Manage Jenkins → Global Tool Configuration
+       2. Scroll to the OWASP Dependency-Check section
+       3. Click Add Dependency-Check
+       4. Name it DP-Check ← This name must match what's in your pipeline
+       5. Choose to install automatically, or point to a manually installed path
+       6. Save
+     - You can also manually install OWASP in your jenkins server
       ```bash
-      
+      cd /opt
+      sudo wget https://github.com/jeremylong/DependencyCheck/releases/download/v8.4.0/dependency-check-8.4.0-release.zip
+      sudo unzip dependency-check-*.zip -d dependency-check
+      sudo chmod +x /opt/dependency-check/bin/dependency-check.sh
+      echo 'export PATH=$PATH:/opt/dependency-check/bin' >> ~/.bashrc
+      source ~/.bashrc
+      dependency-check.sh --version
+      ```
+    -  What Can OWASP Dependency-Check Detect?
+        - Vulnerable libraries in:
+            - Node.js (package-lock.json, npm-shrinkwrap.json)
+            - Java (pom.xml, .jar, .war)
+            - Python, .NET, Ruby (limited support)
+        - CVEs (Common Vulnerabilities and Exposures)
+        - Severity of issues (Critical, High, Medium, Low)
+        - Exploit data from NVD
   10. Kubernetes
       - I have installed kubernets on my system
       - you can refer to this link to install **https://kubernetes.io/docs/tasks/tools/install-kubectl-windows**
