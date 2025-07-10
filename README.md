@@ -38,10 +38,22 @@ Before we start the project there are following things that needs to be install.
      docker version
      docker run hello-world
      ```
-
   6. Sonarqube
      - You can refer this link on how to install sonarqube **https://gist.github.com/Nisarg153/171fc33c4d8b1134355dd7b550b21273**
   7. NodeJS
+    ```bash
+     sudo apt update && sudo apt upgrade -y
+     curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+     sudo apt install -y nodejs
+     sudo npm install -g n
+     sudo n lts     # install latest LTS version
+     sudo n 20.10.0 # or a specific version
+     ```
+     Use n to switch versions interactively with sudo n.  
+  8. Kubernetes 
+     - I have installed kubernets on my system
+     - you can refer to this link to install **https://kubernetes.io/docs/tasks/tools/install-kubectl-windows**
+     - you can also refer this youtube video **https://youtu.be/05MNwC4XJBs?si=r5gHQJabUxFGZdws**
 ### **Phase 1: Initial Setup and Deployment**
 
 **Step 1: Launch EC2 (Ubuntu 22.04):**
