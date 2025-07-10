@@ -42,6 +42,7 @@ Before we start the project there are following things that needs to be install.
      - You can refer this link on how to install sonarqube **https://gist.github.com/Nisarg153/171fc33c4d8b1134355dd7b550b21273**
   7. NodeJS
     ```bash
+
      sudo apt update && sudo apt upgrade -y
      curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
      sudo apt install -y nodejs
