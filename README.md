@@ -9,10 +9,7 @@
 
 <br />
 
-<div align="center">
-  <img src="./public/assets/home-page.png" alt="Logo" width="100%" height="100%">
-  <p align="center">Home Page</p>
-</div>
+
 
 # **Youtube Video for step by step Demonstration!**
 [![Video Tutorial](https://img.youtube.com/vi/g8X5AoqCJHc/0.jpg)](https://youtu.be/g8X5AoqCJHc)
@@ -498,7 +495,14 @@ There are two ways you can monitor the applicaion:
                - `syncPolicy`: Configure the sync policy, including automatic syncing, pruning, and self-healing.
             
             5. **Access your Application**
-               - To Access the app make sure port 30007 is open in your security group and then open a new tab paste your NodeIP:30007, your app should be running.   
+               - To Access the app in local machine run following commnand.
+                 ```bash
+                 kubectl get svc
+                 kubectl port-forward svc/<app-name> 30007:80 #app-name can be netflix-app
+                 ```
+                 Open http://localhost:30007 in browser.
+
+               - To Access the app make sure port 30007 is open in your security group and then open a new tab paste your NodeIP:30007, your app should be running.
 2. By installing prometheus and grafana in your ec2 instance. if you are following video the do the following steps.
       1. **Install Prometheus and Grafana:**
       
