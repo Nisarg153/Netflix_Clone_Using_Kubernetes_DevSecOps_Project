@@ -77,7 +77,7 @@ Before we start the project there are following things that needs to be install.
         ```bash
         trivy image nginx:latest
         ```
-      Or scan your file system:
+       Or scan your file system:
        ```bash
        trivy fs .
        ```
