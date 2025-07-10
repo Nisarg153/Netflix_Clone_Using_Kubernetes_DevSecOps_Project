@@ -230,6 +230,7 @@ Create a Jenkins webhook
 
 1. **Configure CI/CD Pipeline in Jenkins:**
 - Create a CI/CD pipeline in Jenkins to automate your application deployment.
+- if you are following the video then you can copy and paste the pipeline from https://github.com/N4si/DevSecOps-Project/blob/main/README.md
 Certainly, here are the instructions without step numbers:
 
 **Install Dependency-Check and Docker Tools in Jenkins**
@@ -474,7 +475,7 @@ There are two ways you can monitor the applicaion:
             
             5. **Access your Application**
                - To Access the app make sure port 30007 is open in your security group and then open a new tab paste your NodeIP:30007, your app should be running.   
-2. By installing prometheus and grafana in your ec2 instance.
+2. By installing prometheus and grafana in your ec2 instance. if you are following video the do the following steps.
       1. **Install Prometheus and Grafana:**
       
          Set up Prometheus and Grafana to monitor your application.
@@ -793,7 +794,7 @@ There are two ways you can monitor the applicaion:
 1. **Implement Notification Services:**
     - Set up email notifications in Jenkins or other notification mechanisms.
 
-# Phase 6: Kubernetes
+
 
 
 
