@@ -111,7 +111,7 @@ Before we start the project there are following things that needs to be install.
       source ~/.bashrc
       dependency-check.sh --version
       ```
-    -  What Can OWASP Dependency-Check Detect?
+     - What Can OWASP Dependency-Check Detect?
         - Vulnerable libraries in:
             - Node.js (package-lock.json, npm-shrinkwrap.json)
             - Java (pom.xml, .jar, .war)
