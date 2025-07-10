@@ -432,7 +432,31 @@ There are two ways you can monitor the applicaion:
                kubectl port-forward svc/grafana -n grafana 3000:80
                ```
               - Copy the password.
-              - Open the localhost:3000 and paste the password.username: admin
+              - Open the http://localhost:3000 and paste the password.username: admin
+              - Once you are logged in you can also create dashboard by adding data source.
+              - Add Prometheus Data Source:
+                  To visualize metrics, you need to add a data source. Follow these steps:
+                  1. Click on the gear icon (⚙️) in the left sidebar to open the "Configuration" menu.
+                  2. Select "Data Source".
+                  3. Click on the "Add data source" button.
+                  4. Choose "Prometheus" as the data source type.
+                  5. In the "HTTP" section:
+                  6. Set the "URL" to http://localhost:9090 (assuming Prometheus is running on the same server).
+                  7. Click the "Save & Test" button to ensure the data source is working.
+              - Import a Dashboard:
+                  make it easier to view metrics, you can import a pre-configured dashboard. Follow these steps:
+                  1. Click on the "+" (plus) icon in the left sidebar to open the "Create" menu.
+                  2. Select "Dashboard."
+                  3. Click on the "Import" dashboard option.
+                  4. Enter the dashboard code you want to import (e.g., code 1860).
+                  5. Click the "Load" button.
+                  6. Select the data source you added (Prometheus) from the dropdown.
+                  7. Click on the "Import" button.
+                  You should now have a Grafana dashboard set up to visualize metrics from Prometheus.
+                  
+                  Grafana is a powerful tool for creating visualizations and dashboards, and you can further customize it to suit your specific monitoring needs.
+                  
+                  That's it! You've successfully installed and set up Grafana to work with Prometheus for monitoring and visualization.
 
             
             ### Deploy Application with ArgoCD
