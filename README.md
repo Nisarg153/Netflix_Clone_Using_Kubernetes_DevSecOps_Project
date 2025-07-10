@@ -25,11 +25,21 @@
 
 # Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!
 Before we start the project there are following things that needs to be install.
-  1. Java
+  1. Java 17
   2. Jenkins
      - You can refer this link on how to install Jenkins **https://github.com/Nisarg153/Jenkins_Installation**
   4. Docker
-  5. Sonarqube
+     ```bash
+     sudo apt update
+     sudo apt install -y docker-ce docker-ce-cli containerd.io
+     sudo systemctl start docker
+     sudo systemctl enable docker
+     sudo usermod -aG docker $USER
+     docker version
+     docker run hello-world
+     ```
+
+  6. Sonarqube
      - You can refer this link on how to install sonarqube **https://gist.github.com/Nisarg153/171fc33c4d8b1134355dd7b550b21273**
   7. NodeJS
 ### **Phase 1: Initial Setup and Deployment**
