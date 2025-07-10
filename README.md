@@ -22,8 +22,16 @@
 [https://www.youtube.com/@cloudchamp?
 ](https://www.youtube.com/@cloudchamp?sub_confirmation=1)
 
-# Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!
 
+# Deploy Netflix Clone on Cloud using Jenkins - DevSecOps Project!
+Before we start the project there are following things that needs to be install.
+  1. Java
+  2. Jenkins
+     - You can refer this link on how to install Jenkins **https://github.com/Nisarg153/Jenkins_Installation**
+  4. Docker
+  5. Sonarqube
+     - You can refer this link on how to install sonarqube **https://gist.github.com/Nisarg153/171fc33c4d8b1134355dd7b550b21273**
+  7. NodeJS
 ### **Phase 1: Initial Setup and Deployment**
 
 **Step 1: Launch EC2 (Ubuntu 22.04):**
