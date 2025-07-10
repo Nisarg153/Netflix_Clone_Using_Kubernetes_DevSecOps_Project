@@ -50,10 +50,10 @@ Before we start the project there are following things that needs to be install.
      sudo n 20.10.0 # or a specific version
      ```
      - Use n to switch versions interactively with sudo n.  
-  10. Kubernetes 
-     - I have installed kubernets on my system
-     - you can refer to this link to install **https://kubernetes.io/docs/tasks/tools/install-kubectl-windows**
-     - you can also refer this youtube video **https://youtu.be/05MNwC4XJBs?si=r5gHQJabUxFGZdws**
+  10. Kubernetes
+      - I have installed kubernets on my system
+      - you can refer to this link to install **https://kubernetes.io/docs/tasks/tools/install-kubectl-windows**
+      - you can also refer this youtube video **https://youtu.be/05MNwC4XJBs?si=r5gHQJabUxFGZdws**
 ### **Phase 1: Initial Setup and Deployment**
 
 **Step 1: Launch EC2 (Ubuntu 22.04):**
